@@ -1,6 +1,21 @@
 import React from "react";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const ProjectsSection = () => {
+  // Data for the Pie Charts
+  const sentimentData = [
+    { name: 'Satisfied', value: 83.3 },
+    { name: 'Confident', value: 16.7 },
+  ];
+
+  const arRatingData = [
+    { name: 'Excellent (5/5)', value: 50 },
+    { name: 'Good (4/5)', value: 33.3 },
+    { name: 'Average', value: 16.7 },
+  ];
+
+  const COLORS = ['#1a1a1a', '#737373', '#e5e5e5']; // Black, Gray, Light Gray
+
   return (
     <section id="projects" className="py-28 bg-secondary">
       <div className="container mx-auto px-6">
@@ -96,7 +111,107 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Design Artifacts (NEW SECTION) */}
+          {/* Usability Testing Summary (NEW SECTION) */}
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
+                VALIDATION
+              </p>
+              <h3 className="font-display text-3xl text-foreground tracking-tight">
+                Usability Testing Summary
+              </h3>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Left Column: Quantitative + Charts */}
+              <div className="space-y-8">
+                <div className="bg-background/50 border border-border p-8 rounded-sm h-full">
+                  <h4 className="font-display text-xl text-foreground mb-6">Quantitative Findings</h4>
+                  <p className="text-sm leading-relaxed text-muted-foreground font-light mb-8">
+                    The system received high approval ratings, with <strong>83.3%</strong> of respondents reporting they were "Satisfied". The AR core value proposition was validated, as half the users rated the interface as Excellent (5/5). Additionally, <strong>66.7%</strong> strongly agreed that the home page layout offered easy navigation.
+                  </p>
+                  
+                  {/* Charts Container */}
+                  <div className="grid grid-cols-2 gap-4">
+                    {/* Chart 1: Satisfaction */}
+                    <div className="flex flex-col items-center">
+                      <div className="h-32 w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                          <PieChart>
+                            <Pie
+                              data={sentimentData}
+                              cx="50%"
+                              cy="50%"
+                              innerRadius={25}
+                              outerRadius={40}
+                              fill="#8884d8"
+                              paddingAngle={5}
+                              dataKey="value"
+                            >
+                              {sentimentData.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                              ))}
+                            </Pie>
+                            <Tooltip />
+                          </PieChart>
+                        </ResponsiveContainer>
+                      </div>
+                      <p className="text-xs text-center text-muted-foreground mt-2">Overall Satisfaction</p>
+                    </div>
+
+                    {/* Chart 2: AR Rating */}
+                    <div className="flex flex-col items-center">
+                      <div className="h-32 w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                          <PieChart>
+                            <Pie
+                              data={arRatingData}
+                              cx="50%"
+                              cy="50%"
+                              innerRadius={25}
+                              outerRadius={40}
+                              fill="#8884d8"
+                              paddingAngle={5}
+                              dataKey="value"
+                            >
+                              {arRatingData.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                              ))}
+                            </Pie>
+                            <Tooltip />
+                          </PieChart>
+                        </ResponsiveContainer>
+                      </div>
+                      <p className="text-xs text-center text-muted-foreground mt-2">AR Interface Rating</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Qualitative */}
+              <div>
+                <div className="bg-background/50 border border-border p-8 rounded-sm h-full">
+                  <h4 className="font-display text-xl text-foreground mb-6">Qualitative Feedback</h4>
+                  <div className="space-y-6 text-sm leading-relaxed text-muted-foreground font-light">
+                    <div>
+                      <strong className="text-foreground font-medium block mb-2">Positive Reception</strong>
+                      <p>
+                        Users responded positively to the "Distributed Cognition" capabilities (such as the "Next Class" smart widget). Participants noted that it relieved the mental burden of manually opening schedules and searching through them.
+                      </p>
+                    </div>
+                    <div>
+                      <strong className="text-foreground font-medium block mb-2">Refinement & Iteration</strong>
+                      <p>
+                        Initial negative feedback highlighted that the directory was excessively long and map icons were challenging to view. These issues were directly addressed in the refinement stage by introducing <strong>search chips</strong> and <strong>high-contrast map icons</strong> to improve visibility and usability.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Design Artifacts */}
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
