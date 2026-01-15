@@ -13,9 +13,13 @@ const HeroSection = () => {
               
               {/* Card */}
               <div className="bg-card shadow-xl p-8 max-w-sm text-center">
-                {/* Profile Image Placeholder */}
-                <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-secondary overflow-hidden flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Your Photo</span>
+                {/* Profile Image */}
+                <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-secondary overflow-hidden">
+                  <img 
+                    src="https://lxpnkhjpnwfluexbnkkl.supabase.co/storage/v1/object/public/images/EvanT.jpg.jpeg" 
+                    alt="Evan Teong Jian King"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 <h2 className="text-xl font-bold text-foreground mb-2">
@@ -30,7 +34,7 @@ const HeroSection = () => {
                   PROJECT ROLE:
                 </p>
                 <p className="text-lg font-bold text-foreground mb-4">
-                  TEAM LEADER
+                  UX STRATEGIST & STAKEHOLDER LIAISON
                 </p>
                 
                 <p className="text-xs tracking-widest text-muted-foreground">

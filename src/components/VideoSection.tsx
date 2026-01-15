@@ -46,31 +46,9 @@ const VideoSection = () => {
           ) : (
             <div className="aspect-video bg-muted rounded-lg flex flex-col items-center justify-center gap-6 border-2 border-dashed border-border">
               <Video className="w-16 h-16 text-muted-foreground" />
-              <div className="text-center space-y-2">
-                <p className="text-muted-foreground font-medium">
-                  Paste your YouTube video URL below
-                </p>
-                <input
-                  type="text"
-                  value={youtubeUrl}
-                  onChange={(e) => setYoutubeUrl(e.target.value)}
-                  placeholder="https://www.youtube.com/watch?v=..."
-                  className="w-full max-w-md px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-            </div>
-          )}
-          
-          {/* URL Input (always visible for easy updates) */}
-          {videoId && (
-            <div className="mt-6 text-center">
-              <input
-                type="text"
-                value={youtubeUrl}
-                onChange={(e) => setYoutubeUrl(e.target.value)}
-                placeholder="Update YouTube URL..."
-                className="w-full max-w-md px-4 py-2 rounded-lg border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-              />
+              <p className="text-muted-foreground font-medium">
+                Video not available
+              </p>
             </div>
           )}
         </div>

@@ -7,7 +7,7 @@ const ContactSection = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           {/* Copyright */}
           <div>
-            <p className="font-semibold">© 2026 by EVAN TEONG JIAN KING</p>
+            <p className="font-semibold">© 2025 by EVAN TEONG JIAN KING</p>
             <p className="text-sm text-dark-foreground/60 mt-1">
               UI/UX Designer Portfolio
             </p>
@@ -24,8 +24,8 @@ const ContactSection = () => {
             
             <div>
               <p className="text-sm font-semibold mb-1">Write</p>
-              <a href="mailto:evan.teong@email.com" className="text-dark-foreground/80 hover:text-primary transition-colors">
-                evan.teong@email.com
+              <a href="mailto:teong882@gmail.com" className="text-dark-foreground/80 hover:text-primary transition-colors">
+                teong882@gmail.com
               </a>
             </div>
             

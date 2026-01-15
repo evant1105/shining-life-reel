@@ -34,10 +34,7 @@ const ProjectsSection = () => {
               </p>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
-                This project focuses on improving the usability, accessibility, and navigation experience for 
-                university students using an Augmented Reality (AR)-based campus navigation app. The goal was 
-                to reduce confusion, help new users find locations easily, and create a clearer, more intuitive, 
-                and engaging campus way-finding experience.
+                The project aims to reduce users' mental burden by bridging the gap between the digital and physical world through Augmented Reality (AR). The application addresses the Gulf of Evaluation by translating abstract map data into real-world guidance using AR arrows and floating waypoints. Based on a PACT analysis, the target users include freshmen, new faculty, and campus visitors, with a strong focus on accessibility through route prioritization that avoids stairs and favors elevators to support users with limited mobility or heavy equipment.
               </p>
               
               <div className="space-y-2 text-sm text-muted-foreground">
@@ -46,14 +43,13 @@ const ProjectsSection = () => {
               </div>
             </div>
             
-            {/* Project Image Placeholder */}
+            {/* Project Image */}
             <div className="bg-primary p-8 flex items-center justify-center min-h-[400px]">
-              <div className="bg-dark text-dark-foreground p-4 rounded-3xl max-w-[200px] text-center">
-                <p className="text-sm mb-4">Project Screenshot</p>
-                <div className="bg-card/20 rounded-xl p-4 text-xs">
-                  Add your project image here
-                </div>
-              </div>
+              <img 
+                src="https://lxpnkhjpnwfluexbnkkl.supabase.co/storage/v1/object/public/images/ProjectMain.png" 
+                alt="MyCampus AR Navigation App"
+                className="max-w-full max-h-[350px] object-contain rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
