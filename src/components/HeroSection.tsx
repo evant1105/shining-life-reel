@@ -58,14 +58,7 @@ const HeroSection = () => {
               Discover my work and experience
             </p>
             
-            <div className="flex flex-wrap gap-4 pt-2">
-              <Button className="bg-foreground text-background hover:bg-foreground/90 px-8 py-6 text-xs tracking-widest font-medium">
-                SKILLS & TOOLS
-              </Button>
-              <Button variant="outline" className="border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-6 text-xs tracking-widest font-medium">
-                PROJECTS
-              </Button>
-            </div>
+            {/* Buttons Removed Here */}
             
             <div className="pt-6 border-t border-border">
               <p className="text-foreground/80 leading-relaxed font-light">
