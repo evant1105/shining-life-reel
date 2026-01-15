@@ -1,65 +1,72 @@
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 bg-secondary">
+    <section id="projects" className="py-28 bg-secondary">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-black text-foreground inline-flex items-center gap-3">
-            <span className="w-4 h-4 bg-primary" />
-            SELECTED UX WORK
-          </h2>
-          <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
-            A collection of my UI/UX projects showcasing my design thinking, process, and outcomes.
+        <div className="text-center mb-20">
+          <p className="text-xs tracking-[0.4em] text-muted-foreground mb-4">
+            PORTFOLIO
           </p>
+          <h2 className="font-display text-4xl lg:text-5xl text-foreground tracking-tight">
+            Selected UX Work
+          </h2>
+          <div className="w-16 h-px bg-foreground mx-auto mt-8" />
         </div>
 
         {/* Project Card */}
-        <div className="bg-card shadow-xl max-w-5xl mx-auto">
+        <div className="bg-card border border-border max-w-5xl mx-auto overflow-hidden">
           <div className="grid lg:grid-cols-2">
             {/* Project Info */}
-            <div className="p-8 lg:p-12">
-              <div className="flex items-start gap-3 mb-4">
-                <div className="w-1 h-16 bg-primary" />
-                <h3 className="text-2xl font-bold text-primary">
-                  MyCampus AR
-                  <br />
-                  Navigation App (UI/UX
-                  <br />
-                  Project)
-                </h3>
-              </div>
-              
-              <p className="font-semibold text-foreground mb-4">
-                Project Role: UX Strategist & Stakeholder Liaison
+            <div className="p-10 lg:p-14">
+              <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
+                CASE STUDY
+              </p>
+              <h3 className="font-display text-3xl text-foreground mb-2 tracking-tight">
+                MyCampus AR
+              </h3>
+              <p className="font-display text-xl text-foreground/70 italic mb-6">
+                Navigation App
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <div className="w-10 h-px bg-foreground mb-6" />
+              
+              <p className="text-xs tracking-widest text-muted-foreground mb-2">
+                PROJECT ROLE
+              </p>
+              <p className="font-medium text-foreground mb-8">
+                UX Strategist & Stakeholder Liaison
+              </p>
+              
+              <p className="text-muted-foreground leading-relaxed mb-8 font-light">
                 The project aims to reduce users' mental burden by bridging the gap between the digital and physical world through Augmented Reality (AR). The application addresses the Gulf of Evaluation by translating abstract map data into real-world guidance using AR arrows and floating waypoints. Based on a PACT analysis, the target users include freshmen, new faculty, and campus visitors, with a strong focus on accessibility through route prioritization that avoids stairs and favors elevators to support users with limited mobility or heavy equipment.
               </p>
               
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p><strong>Domain:</strong> Mobile UI/UX Design & Augmented Reality (AR)</p>
-                <p><strong>Tools:</strong> Figma, User Research, Usability Testing</p>
+              <div className="space-y-3 text-sm text-muted-foreground border-t border-border pt-6">
+                <p><span className="text-foreground font-medium">Domain:</span> Mobile UI/UX Design & AR</p>
+                <p><span className="text-foreground font-medium">Tools:</span> Figma, User Research, Usability Testing</p>
               </div>
             </div>
             
             {/* Project Image */}
-            <div className="bg-primary p-8 flex items-center justify-center min-h-[400px]">
+            <div className="bg-foreground p-10 flex items-center justify-center min-h-[450px]">
               <img 
                 src="https://lxpnkhjpnwfluexbnkkl.supabase.co/storage/v1/object/public/images/ProjectMain.png" 
                 alt="MyCampus AR Navigation App"
-                className="max-w-full max-h-[350px] object-contain rounded-lg shadow-lg"
+                className="max-w-full max-h-[380px] object-contain"
               />
             </div>
           </div>
         </div>
 
         {/* Additional Project Sections */}
-        <div className="mt-16 space-y-16">
+        <div className="mt-24 space-y-24">
           {/* Problem Section */}
-          <div className="text-center max-w-4xl mx-auto">
-            <h3 className="text-3xl font-black text-foreground mb-6">PROBLEM</h3>
-            <p className="text-muted-foreground">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
+              THE CHALLENGE
+            </p>
+            <h3 className="font-display text-3xl text-foreground mb-8 tracking-tight">Problem</h3>
+            <p className="text-muted-foreground leading-relaxed font-light">
               Many students and campus visitors struggle to find lecture halls, labs, offices, and facilities
               —especially when visiting for the first time. Traditional 2D maps are often confusing, lack 
               context, and do not reflect real-world surroundings. Approximately 67 percent of learners claim 
@@ -69,16 +76,19 @@ const ProjectsSection = () => {
 
           {/* Target Users */}
           <div className="text-center">
-            <h3 className="text-3xl font-black text-foreground mb-12">TARGET USERS</h3>
-            <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
+              USER PERSONAS
+            </p>
+            <h3 className="font-display text-3xl text-foreground mb-16 tracking-tight">Target Users</h3>
+            <div className="grid sm:grid-cols-3 gap-12 max-w-3xl mx-auto">
               {[
                 { icon: "👤", label: "New university students" },
                 { icon: "👥", label: "Visitors & parents" },
                 { icon: "🎫", label: "Event participants" },
               ].map((user) => (
                 <div key={user.label} className="text-center">
-                  <div className="text-4xl text-primary mb-4">{user.icon}</div>
-                  <p className="text-foreground font-medium">{user.label}</p>
+                  <div className="text-4xl mb-4 grayscale">{user.icon}</div>
+                  <p className="text-foreground font-light tracking-wide">{user.label}</p>
                 </div>
               ))}
             </div>

@@ -19,32 +19,31 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-3 h-3 bg-primary" />
-            <span className="font-bold text-foreground">EVAN TEONG</span>
-            <span className="text-muted-foreground">/ UI/UX DESIGNER</span>
+          <a href="#" className="flex items-center gap-3">
+            <span className="font-display text-xl tracking-wide text-foreground">EVAN TEONG</span>
+            <span className="text-muted-foreground text-sm font-light tracking-widest">| PORTFOLIO</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => handleClick(item.label)}
-                className={`text-sm font-medium transition-colors relative ${
+                className={`text-xs font-medium tracking-widest transition-all duration-300 relative ${
                   activeItem === item.label
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.label}
                 {activeItem === item.label && (
-                  <span className="absolute -top-2 left-0 right-0 h-0.5 bg-primary" />
+                  <span className="absolute -bottom-1 left-0 right-0 h-px bg-foreground" />
                 )}
               </a>
             ))}
@@ -61,16 +60,16 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4">
+          <div className="md:hidden mt-6 pb-6 space-y-5 border-t border-border pt-6">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => handleClick(item.label)}
-                className={`block text-sm font-medium transition-colors ${
+                className={`block text-xs font-medium tracking-widest transition-colors ${
                   activeItem === item.label
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.label}
