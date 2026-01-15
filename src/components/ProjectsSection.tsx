@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const ProjectsSection = () => {
   // Data for the Pie Charts
@@ -17,6 +17,23 @@ const ProjectsSection = () => {
   // Colorful Palettes
   const COLORS_SENTIMENT = ['#10b981', '#3b82f6']; // Emerald, Blue
   const COLORS_RATING = ['#8b5cf6', '#ec4899', '#94a3b8']; // Violet, Pink, Slate
+
+  // Custom Legend Component to prevent "jumbled" text overlapping
+  const CustomLegend = ({ data, colors }: { data: any[], colors: string[] }) => (
+    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4">
+      {data.map((entry, index) => (
+        <div key={index} className="flex items-center gap-2">
+          <div 
+            className="w-3 h-3 rounded-full shadow-sm" 
+            style={{ backgroundColor: colors[index % colors.length] }} 
+          />
+          <span className="text-sm text-muted-foreground whitespace-nowrap">
+            {entry.name}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <section id="projects" className="py-28 bg-secondary">
@@ -130,22 +147,23 @@ const ProjectsSection = () => {
                 <div className="bg-background/50 border border-border p-8 rounded-sm h-full flex flex-col justify-center">
                   <h4 className="font-display text-xl text-foreground mb-6">Quantitative Findings</h4>
                   <p className="text-sm leading-relaxed text-muted-foreground font-light mb-8">
-                    The system received high approval ratings, with <strong>83.3%</strong> of respondents reporting they were "Satisfied". The AR core value proposition was validated, as half the users rated the interface as Excellent (5/5). Additionally, <strong>66.7%</strong> strongly agreed that the home page layout offered easy navigation.
+                    The system achieved high usability scores, with <strong>83.3%</strong> of respondents reporting they were "Satisfied". The AR core value proposition was validated, as half the users rated the interface as Excellent (5/5). Additionally, <strong>66.7%</strong> strongly agreed that the home page layout offered easy navigation, confirming the effectiveness of the information architecture.
                   </p>
                   
                   {/* Charts Container */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-8">
                     {/* Chart 1: Satisfaction */}
                     <div className="flex flex-col items-center">
-                      <div className="h-64 w-full">
+                      <p className="text-xs font-medium text-foreground mb-2 text-center uppercase tracking-wider">Overall Satisfaction</p>
+                      <div className="h-40 w-full">
                         <ResponsiveContainer width="100%" height="100%">
                           <PieChart>
                             <Pie
                               data={sentimentData}
                               cx="50%"
-                              cy="45%"
-                              innerRadius={40}
-                              outerRadius={70}
+                              cy="50%"
+                              innerRadius={30}
+                              outerRadius={55}
                               paddingAngle={5}
                               dataKey="value"
                             >
@@ -154,24 +172,24 @@ const ProjectsSection = () => {
                               ))}
                             </Pie>
                             <Tooltip contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e5e5e5' }} />
-                            <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ paddingTop: '20px' }}/>
                           </PieChart>
                         </ResponsiveContainer>
                       </div>
-                      <p className="text-sm font-medium text-foreground mt-4 text-center">Overall Satisfaction</p>
+                      <CustomLegend data={sentimentData} colors={COLORS_SENTIMENT} />
                     </div>
 
                     {/* Chart 2: AR Rating */}
                     <div className="flex flex-col items-center">
-                      <div className="h-64 w-full">
+                      <p className="text-xs font-medium text-foreground mb-2 text-center uppercase tracking-wider">AR Interface Rating</p>
+                      <div className="h-40 w-full">
                         <ResponsiveContainer width="100%" height="100%">
                           <PieChart>
                             <Pie
                               data={arRatingData}
                               cx="50%"
-                              cy="45%"
-                              innerRadius={40}
-                              outerRadius={70}
+                              cy="50%"
+                              innerRadius={30}
+                              outerRadius={55}
                               paddingAngle={5}
                               dataKey="value"
                             >
@@ -180,11 +198,10 @@ const ProjectsSection = () => {
                               ))}
                             </Pie>
                             <Tooltip contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e5e5e5' }} />
-                            <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ paddingTop: '20px' }}/>
                           </PieChart>
                         </ResponsiveContainer>
                       </div>
-                      <p className="text-sm font-medium text-foreground mt-4 text-center">AR Interface Rating</p>
+                      <CustomLegend data={arRatingData} colors={COLORS_RATING} />
                     </div>
                   </div>
                 </div>
@@ -198,13 +215,13 @@ const ProjectsSection = () => {
                     <div>
                       <strong className="text-foreground font-medium block mb-2">Positive Reception</strong>
                       <p>
-                        Users responded positively to the "Distributed Cognition" capabilities (such as the "Next Class" smart widget). Participants noted that it relieved the mental burden of manually opening schedules and searching through them.
+                        Users responded positively to the "Distributed Cognition" capabilities (such as the <em>Next Class</em> smart widget). Participants reported that it relieved the mental burden of manually opening schedules and searching through them.
                       </p>
                     </div>
                     <div>
                       <strong className="text-foreground font-medium block mb-2">Refinement & Iteration</strong>
                       <p>
-                        Initial negative feedback highlighted that the directory was excessively long and map icons were challenging to view. These issues were directly addressed in the refinement stage by introducing <strong>search chips</strong> and <strong>high-contrast map icons</strong> to improve visibility and usability.
+                        Initial feedback indicated that the directory was excessively long and map icons were challenging to view. These issues were directly addressed in the refinement stage by introducing <strong>search chips</strong> and <strong>high-contrast map icons</strong> to improve visibility and findability.
                       </p>
                     </div>
                   </div>
@@ -258,7 +275,7 @@ const ProjectsSection = () => {
                  </div>
               </div>
 
-              {/* Prototype Section (New) */}
+              {/* Prototype Section */}
               <div className="bg-background/50 border border-border p-8 rounded-sm">
                  <h4 className="font-display text-xl text-foreground mb-8 text-center">Prototype</h4>
                  <div className="grid grid-cols-3 gap-4">
