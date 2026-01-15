@@ -7,13 +7,11 @@ const PhilosophySection = () => {
         </h2>
         
         <p className="text-muted-foreground leading-relaxed text-lg italic">
-          I believe that effective design starts with empathy. My approach focuses on understanding{" "}
-          <span className="underline decoration-primary decoration-2 underline-offset-4">users first</span>,{" "}
-          <span className="underline decoration-primary decoration-2 underline-offset-4">validating ideas early</span>, and{" "}
-          continuously improving through feedback. I also value accessibility and clarity, ensuring that users 
-          can interact with digital products comfortably and confidently. My design is evidence-based, grounded 
-          in user research consisting of surveys, interviews, and task analysis. I use real user knowledge 
-          instead of assumptions when presenting problems and solutions.
+          My design philosophy is{" "}
+          <span className="underline decoration-primary decoration-2 underline-offset-4">evidence-based</span> and{" "}
+          <span className="underline decoration-primary decoration-2 underline-offset-4">outcome-driven</span>,{" "}
+          combining deep user research, empathy, and holistic systems thinking to create clear, accessible, 
+          and practical solutions that balance innovation with real-world usability.
         </p>
       </div>
     </section>

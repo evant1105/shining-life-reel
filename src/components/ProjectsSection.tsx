@@ -30,7 +30,7 @@ const ProjectsSection = () => {
               </div>
               
               <p className="font-semibold text-foreground mb-4">
-                Project Role: Project Leader
+                Project Role: UX Strategist & Stakeholder Liaison
               </p>
               
               <p className="text-muted-foreground leading-relaxed mb-6">

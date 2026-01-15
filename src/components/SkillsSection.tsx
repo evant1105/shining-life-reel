@@ -8,8 +8,8 @@ const skills = [
   },
   {
     icon: Layout,
-    title: "Wireframing",
-    description: "Low to high fidelity layout designs",
+    title: "User Flows",
+    description: "Creating coherent flows from concept to development",
   },
   {
     icon: Smartphone,
@@ -18,8 +18,8 @@ const skills = [
   },
   {
     icon: ClipboardCheck,
-    title: "Usability Testing",
-    description: "Surveys, interviews and task analysis",
+    title: "User Research",
+    description: "Testing, surveys, questionnaires and interviews",
   },
 ];
 
@@ -31,9 +31,8 @@ const SkillsSection = () => {
           SKILLS AND TOOLS
         </h2>
         
-        <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-          These are the core UI/UX tools and design practices I use when working on projects, 
-          from ideation to testing.
+        <p className="text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          I am proficient in wireframing, prototyping, and interface design using Figma, with a strong focus on creating coherent user flows from concept to development. My strengths lie in user research and usability methods—including testing, surveys, questionnaires, and structured interviews—shaped by hands-on customer support experience with real users. This allows me to ask the right questions, uncover genuine user needs and behaviors, and apply evidence-based insights through iterative ideation to deliver practical, user-centered design solutions.
         </p>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
