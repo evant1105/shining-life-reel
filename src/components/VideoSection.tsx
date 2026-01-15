@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Video } from "lucide-react";
 
 const VideoSection = () => {
-  const [youtubeUrl, setYoutubeUrl] = useState("");
+  const [youtubeUrl, setYoutubeUrl] = useState("https://www.youtube.com/watch?v=ytLYmz-kmfA");
   
   // Extract YouTube video ID from URL
   const getYoutubeId = (url: string) => {

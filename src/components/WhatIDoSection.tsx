@@ -1,10 +1,9 @@
 const responsibilities = [
-  "Conduct basic user research to understand needs and pain points",
-  "Delegate all the tasks to my team members",
-  "Create project website",
-  "Create high fidelity prototypes to communicate ideas",
-  "Improve usability through testing and iteration",
-  "Design clean, structured, and user-friendly interfaces",
+  "Acted as the primary communication bridge between the design team and stakeholders",
+  "Led front-end strategy with a focus on refining user feedback and cross-channel reasoning",
+  "Took full ownership as the project spokesperson, preparing all pitch decks and guiding presentation delivery",
+  "Ensured presentations went beyond visual overviews, framing them as tactical, sales-oriented narratives",
+  "Clearly articulated app functionality and positioned the AR solution as a simple, effective answer to complex navigation challenges",
 ];
 
 const WhatIDoSection = () => {
