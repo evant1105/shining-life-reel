@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
 const ProjectsSection = () => {
   // Data for the Pie Charts
@@ -14,7 +14,9 @@ const ProjectsSection = () => {
     { name: 'Average', value: 16.7 },
   ];
 
-  const COLORS = ['#1a1a1a', '#737373', '#e5e5e5']; // Black, Gray, Light Gray
+  // Colorful Palettes
+  const COLORS_SENTIMENT = ['#10b981', '#3b82f6']; // Emerald, Blue
+  const COLORS_RATING = ['#8b5cf6', '#ec4899', '#94a3b8']; // Violet, Pink, Slate
 
   return (
     <section id="projects" className="py-28 bg-secondary">
@@ -111,7 +113,7 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Usability Testing Summary (NEW SECTION) */}
+          {/* Usability Testing Summary */}
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
@@ -125,7 +127,7 @@ const ProjectsSection = () => {
             <div className="grid md:grid-cols-2 gap-12">
               {/* Left Column: Quantitative + Charts */}
               <div className="space-y-8">
-                <div className="bg-background/50 border border-border p-8 rounded-sm h-full">
+                <div className="bg-background/50 border border-border p-8 rounded-sm h-full flex flex-col justify-center">
                   <h4 className="font-display text-xl text-foreground mb-6">Quantitative Findings</h4>
                   <p className="text-sm leading-relaxed text-muted-foreground font-light mb-8">
                     The system received high approval ratings, with <strong>83.3%</strong> of respondents reporting they were "Satisfied". The AR core value proposition was validated, as half the users rated the interface as Excellent (5/5). Additionally, <strong>66.7%</strong> strongly agreed that the home page layout offered easy navigation.
@@ -135,54 +137,54 @@ const ProjectsSection = () => {
                   <div className="grid grid-cols-2 gap-4">
                     {/* Chart 1: Satisfaction */}
                     <div className="flex flex-col items-center">
-                      <div className="h-32 w-full">
+                      <div className="h-48 w-full">
                         <ResponsiveContainer width="100%" height="100%">
                           <PieChart>
                             <Pie
                               data={sentimentData}
                               cx="50%"
                               cy="50%"
-                              innerRadius={25}
-                              outerRadius={40}
-                              fill="#8884d8"
+                              innerRadius={35}
+                              outerRadius={60}
                               paddingAngle={5}
                               dataKey="value"
                             >
                               {sentimentData.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                <Cell key={`cell-${index}`} fill={COLORS_SENTIMENT[index % COLORS_SENTIMENT.length]} />
                               ))}
                             </Pie>
-                            <Tooltip />
+                            <Tooltip contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e5e5e5' }} />
+                            <Legend verticalAlign="bottom" height={36} iconType="circle" />
                           </PieChart>
                         </ResponsiveContainer>
                       </div>
-                      <p className="text-xs text-center text-muted-foreground mt-2">Overall Satisfaction</p>
+                      <p className="text-xs text-center font-medium text-foreground mt-[-10px]">Overall Satisfaction</p>
                     </div>
 
                     {/* Chart 2: AR Rating */}
                     <div className="flex flex-col items-center">
-                      <div className="h-32 w-full">
+                      <div className="h-48 w-full">
                         <ResponsiveContainer width="100%" height="100%">
                           <PieChart>
                             <Pie
                               data={arRatingData}
                               cx="50%"
                               cy="50%"
-                              innerRadius={25}
-                              outerRadius={40}
-                              fill="#8884d8"
+                              innerRadius={35}
+                              outerRadius={60}
                               paddingAngle={5}
                               dataKey="value"
                             >
                               {arRatingData.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                <Cell key={`cell-${index}`} fill={COLORS_RATING[index % COLORS_RATING.length]} />
                               ))}
                             </Pie>
-                            <Tooltip />
+                            <Tooltip contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e5e5e5' }} />
+                            <Legend verticalAlign="bottom" height={36} iconType="circle" />
                           </PieChart>
                         </ResponsiveContainer>
                       </div>
-                      <p className="text-xs text-center text-muted-foreground mt-2">AR Interface Rating</p>
+                      <p className="text-xs text-center font-medium text-foreground mt-[-10px]">AR Interface Rating</p>
                     </div>
                   </div>
                 </div>
@@ -255,6 +257,35 @@ const ProjectsSection = () => {
                     </div>
                  </div>
               </div>
+
+              {/* Prototype Section (New) */}
+              <div className="bg-background/50 border border-border p-8 rounded-sm">
+                 <h4 className="font-display text-xl text-foreground mb-8 text-center">Prototype</h4>
+                 <div className="grid grid-cols-3 gap-4">
+                    <div className="overflow-hidden rounded-sm border border-border/50">
+                      <img 
+                        src="https://lxpnkhjpnwfluexbnkkl.supabase.co/storage/v1/object/public/images/Proto1.png" 
+                        alt="Prototype Screen 1"
+                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div className="overflow-hidden rounded-sm border border-border/50">
+                      <img 
+                        src="https://lxpnkhjpnwfluexbnkkl.supabase.co/storage/v1/object/public/images/Proto2.png" 
+                        alt="Prototype Screen 2"
+                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div className="overflow-hidden rounded-sm border border-border/50">
+                      <img 
+                        src="https://lxpnkhjpnwfluexbnkkl.supabase.co/storage/v1/object/public/images/Proto3.png" 
+                        alt="Prototype Screen 3"
+                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                 </div>
+              </div>
+
             </div>
           </div>
 
