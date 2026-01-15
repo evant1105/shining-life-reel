@@ -96,7 +96,54 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Challenges & Solutions (NEW SECTION ADDED HERE) */}
+          {/* Design Artifacts (NEW SECTION) */}
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
+                VISUALIZATION
+              </p>
+              <h3 className="font-display text-3xl text-foreground tracking-tight">
+                Design Artifacts
+              </h3>
+            </div>
+
+            <div className="space-y-16">
+              {/* Low-Fidelity Section */}
+              <div className="bg-background/50 border border-border p-8 rounded-sm">
+                 <h4 className="font-display text-xl text-foreground mb-8 text-center">Low-fidelity Wireframes</h4>
+                 <div className="overflow-hidden rounded-sm border border-border/50">
+                    <img 
+                      src="https://lxpnkhjpnwfluexbnkkl.supabase.co/storage/v1/object/public/images/PaperPrototype.png" 
+                      alt="Low-fidelity Wireframes"
+                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                 </div>
+              </div>
+
+              {/* High-Fidelity Section */}
+              <div className="bg-background/50 border border-border p-8 rounded-sm">
+                 <h4 className="font-display text-xl text-foreground mb-8 text-center">High-Fidelity UI Screens</h4>
+                 <div className="grid md:grid-cols-2 gap-8">
+                    <div className="overflow-hidden rounded-sm border border-border/50">
+                      <img 
+                        src="https://lxpnkhjpnwfluexbnkkl.supabase.co/storage/v1/object/public/images/HighFidel1.png" 
+                        alt="High Fidelity Screen 1"
+                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div className="overflow-hidden rounded-sm border border-border/50">
+                      <img 
+                        src="https://lxpnkhjpnwfluexbnkkl.supabase.co/storage/v1/object/public/images/HighFidel2.png" 
+                        alt="High Fidelity Screen 2"
+                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Challenges & Solutions */}
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
