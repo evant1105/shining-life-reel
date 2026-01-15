@@ -129,7 +129,7 @@ const ProjectsSection = () => {
                 <div className="space-y-4 text-sm leading-relaxed text-muted-foreground font-light">
                   <p>
                     <strong className="text-foreground font-medium block mb-1">Challenge:</strong> 
-                    Users struggled with the "gulf of evaation" when transitioning from physical entry to digital navigation. Complex menus created friction exactly when immediacy was needed.
+                    Users struggled with the "gulf of evaluation" when transitioning from physical entry to digital navigation. Complex menus created friction exactly when immediacy was needed.
                   </p>
                   <p>
                     <strong className="text-foreground font-medium block mb-1">Solution:</strong> 
