@@ -93,6 +93,51 @@ const ProjectsSection = () => {
               ))}
             </div>
           </div>
+
+          {/* Challenges & Solutions (NEW SECTION) */}
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
+                PROCESS
+              </p>
+              <h3 className="font-display text-3xl text-foreground tracking-tight">
+                Challenges & Solutions
+              </h3>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 text-left">
+              {/* Challenge 1 */}
+              <div className="bg-background/50 border border-border p-8 rounded-sm">
+                <h4 className="font-display text-xl text-foreground mb-6">The "Verticality" Problem</h4>
+                <div className="space-y-4 text-sm leading-relaxed text-muted-foreground font-light">
+                  <p>
+                    <strong className="text-foreground font-medium block mb-1">Challenge:</strong> 
+                    Usability testing revealed a spatial disconnect in multi-story wayfinding. 33% of users exhibited "icon blindness," failing to notice stair icons on 2D maps, which led to wasted time and navigation errors.
+                  </p>
+                  <p>
+                    <strong className="text-foreground font-medium block mb-1">Solution:</strong> 
+                    We implemented <em>Facility Prioritization Logic</em>. Users pre-select their route preference (Speed/Stairs vs. Accessibility/Elevators) before calculation. This algorithmic filtering reduces cognitive load and aligns the map with user intent.
+                  </p>
+                </div>
+              </div>
+
+              {/* Challenge 2 */}
+              <div className="bg-background/50 border border-border p-8 rounded-sm">
+                <h4 className="font-display text-xl text-foreground mb-6">Disjointed Workflows</h4>
+                <div className="space-y-4 text-sm leading-relaxed text-muted-foreground font-light">
+                  <p>
+                    <strong className="text-foreground font-medium block mb-1">Challenge:</strong> 
+                    Users struggled with the "gulf of evaluation" when transitioning from physical entry to digital navigation. Complex menus created friction exactly when immediacy was needed.
+                  </p>
+                  <p>
+                    <strong className="text-foreground font-medium block mb-1">Solution:</strong> 
+                    We adopted an omnichannel strategy by placing physical QR code anchors at building entrances. Scanning these instantly launches the AR navigation layer via marker-based tracking, creating a seamless handover from the physical to the digital world.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
