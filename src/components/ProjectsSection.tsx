@@ -44,7 +44,7 @@ const ProjectsSection = () => {
             PORTFOLIO
           </p>
           <h2 className="font-display text-4xl lg:text-5xl text-foreground tracking-tight">
-            Selected UX Work
+            Selected UX Project
           </h2>
           <div className="w-16 h-px bg-foreground mx-auto mt-8" />
         </div>
@@ -58,7 +58,7 @@ const ProjectsSection = () => {
                 CASE STUDY
               </p>
               <h3 className="font-display text-3xl text-foreground mb-2 tracking-tight">
-                MyCampus AR
+                MyCampus AR Wayfinder
               </h3>
               <p className="font-display text-xl text-foreground/70 italic mb-6">
                 Navigation App

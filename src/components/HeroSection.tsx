@@ -55,7 +55,7 @@ const HeroSection = () => {
             </div>
             
             <p className="text-muted-foreground font-light tracking-wide">
-              Discover my work and experience
+              Discover my work 
             </p>
             
             {/* Buttons Removed Here */}
