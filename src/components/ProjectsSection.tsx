@@ -1,3 +1,5 @@
+import React from "react";
+
 const ProjectsSection = () => {
   return (
     <section id="projects" className="py-28 bg-secondary">
@@ -94,7 +96,7 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Challenges & Solutions (NEW SECTION) */}
+          {/* Challenges & Solutions (NEW SECTION ADDED HERE) */}
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
