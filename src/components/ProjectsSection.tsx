@@ -137,15 +137,15 @@ const ProjectsSection = () => {
                   <div className="grid grid-cols-2 gap-4">
                     {/* Chart 1: Satisfaction */}
                     <div className="flex flex-col items-center">
-                      <div className="h-48 w-full">
+                      <div className="h-64 w-full">
                         <ResponsiveContainer width="100%" height="100%">
                           <PieChart>
                             <Pie
                               data={sentimentData}
                               cx="50%"
-                              cy="50%"
-                              innerRadius={35}
-                              outerRadius={60}
+                              cy="45%"
+                              innerRadius={40}
+                              outerRadius={70}
                               paddingAngle={5}
                               dataKey="value"
                             >
@@ -154,24 +154,24 @@ const ProjectsSection = () => {
                               ))}
                             </Pie>
                             <Tooltip contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e5e5e5' }} />
-                            <Legend verticalAlign="bottom" height={36} iconType="circle" />
+                            <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ paddingTop: '20px' }}/>
                           </PieChart>
                         </ResponsiveContainer>
                       </div>
-                      <p className="text-xs text-center font-medium text-foreground mt-[-10px]">Overall Satisfaction</p>
+                      <p className="text-sm font-medium text-foreground mt-4 text-center">Overall Satisfaction</p>
                     </div>
 
                     {/* Chart 2: AR Rating */}
                     <div className="flex flex-col items-center">
-                      <div className="h-48 w-full">
+                      <div className="h-64 w-full">
                         <ResponsiveContainer width="100%" height="100%">
                           <PieChart>
                             <Pie
                               data={arRatingData}
                               cx="50%"
-                              cy="50%"
-                              innerRadius={35}
-                              outerRadius={60}
+                              cy="45%"
+                              innerRadius={40}
+                              outerRadius={70}
                               paddingAngle={5}
                               dataKey="value"
                             >
@@ -180,11 +180,11 @@ const ProjectsSection = () => {
                               ))}
                             </Pie>
                             <Tooltip contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e5e5e5' }} />
-                            <Legend verticalAlign="bottom" height={36} iconType="circle" />
+                            <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ paddingTop: '20px' }}/>
                           </PieChart>
                         </ResponsiveContainer>
                       </div>
-                      <p className="text-xs text-center font-medium text-foreground mt-[-10px]">AR Interface Rating</p>
+                      <p className="text-sm font-medium text-foreground mt-4 text-center">AR Interface Rating</p>
                     </div>
                   </div>
                 </div>
